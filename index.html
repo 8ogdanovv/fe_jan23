@@ -237,6 +237,31 @@
 
     </main>
   </div>
+
+  <script>
+    function getMinutes() {
+      return String(new Date().getMinutes()).length === 2
+        ? (new Date().getMinutes())
+        : '0' + new Date().getMinutes();
+    }
+
+    function getSeconds() {
+      return String(new Date().getSeconds()).length === 2
+        ? new Date().getSeconds()
+        : '0' + new Date().getSeconds();
+    }
+
+    function thankZero() {
+      return (new Date().getSeconds()) % 2 === 0
+        ? '|Č| : ' + getMinutes() + ' : ' + getSeconds() + ' Auto Biography 4Coding @vadym4čhe +380 (505) 444 199'
+        : '(č) : ' + getMinutes() + ' : ' + getSeconds() + ' Auto Biography #Čoding @vadym4che +38(050)-544-41-99';
+    }
+
+    setInterval(() => {
+      document.title = thankZero();
+    }, 1000);
+  </script>
+
 </body>
 
 </html>
